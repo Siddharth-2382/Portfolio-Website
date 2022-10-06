@@ -1,0 +1,601 @@
+p {
+  margin: 0;
+  font-weight: 100;
+}
+
+/* Navigation Bar */
+
+.navbar-brand {
+  width: 10px;
+}
+
+.navbar .container-fluid {
+  padding: 0 5%;
+}
+
+.logo {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  filter: invert(1);
+}
+
+.nav-item {
+  padding: 0 25px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: "Montserrat-Light";
+  text-align: left;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+/* Sections */
+
+.dark-section {
+  background: #080808;
+  color: white;
+}
+
+.light-section {
+  background: rgb(35 41 45);
+  color: white;
+}
+
+/* Title Section */
+
+#title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#title .contain {
+  padding: 2% 7.5% 2%;
+}
+
+.big-heading {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-size: 9.5rem;
+  text-align: center;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 0.065rem white;
+  background: url(images/back.png);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
+}
+
+@keyframes back {
+  100% {
+    background-position: 2000px 0;
+  }
+}
+
+.aligner {
+  display: flex;
+  align-items: center;
+  margin-left: 7.5%;
+}
+
+.medium-heading {
+  display: inline;
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-size: 3.3rem;
+  text-align: center;
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.names {
+  height: 4.5rem;
+  line-height: 3.6rem;
+  overflow-y: hidden;
+}
+
+.medium-heading span {
+  position: relative;
+  color: crimson;
+  animation: swapper 10s ease infinite;
+}
+
+@keyframes swapper {
+  0%,
+  100% {
+    top: 0;
+  }
+  20% {
+    top: 0;
+  }
+  25% {
+    top: -4.5rem;
+  }
+  45% {
+    top: -4.5rem;
+  }
+  50% {
+    top: -9rem;
+  }
+  70% {
+    top: -9rem;
+  }
+  75% {
+    top: -13.5rem;
+  }
+  95% {
+    top: -13.5rem;
+  }
+}
+
+/* About Me Section */
+
+#about {
+  padding: 7.5%;
+}
+
+.photo {
+  text-align: center;
+}
+
+.profile-pic {
+  filter: grayscale(100%);
+  width: 65%;
+  border-radius: 0.5rem;
+  transition: all 0.5s;
+}
+
+.profile-pic:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0.3rem 1rem rgba(255, 255, 255, 0.6);
+}
+
+.about-heading {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+h2 span {
+  color: crimson;
+  line-height: 1.8;
+}
+
+.about-text {
+  font-weight: 100;
+}
+
+.tab-titles {
+  display: flex;
+  margin: 1.5rem 0 1rem;
+}
+
+.tab-link {
+  margin-right: 3.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0.15rem;
+  left: 0;
+  bottom: -0.3rem;
+  background: crimson;
+  transition: 0.5s;
+}
+
+.tab-link.active-link::after {
+  width: 100%;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active-tab {
+  display: block;
+}
+
+.tab-content ul {
+  padding: 0;
+}
+
+.tab-content ul li {
+  list-style: none;
+  margin: 1rem 0;
+  font-weight: 100;
+}
+
+.tab-content ul li span {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: crimson;
+}
+
+/* My Work Section */
+
+#work {
+  padding: 4.1% 7.5%;
+  height: 100vh;
+}
+
+.work-heading {
+  font-family: "Montserrat";
+  font-size: 4rem;
+  font-weight: 700;
+  padding-bottom: 1.5rem;
+}
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 2.5rem;
+}
+
+.work {
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.work img {
+  width: 100%;
+  border-radius: 1rem;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), crimson);
+  border-radius: 1rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 2.5rem;
+  text-align: center;
+  transition: height 0.5s;
+}
+
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+
+.layer a {
+  margin-top: 1.25rem;
+  color: crimson;
+  text-decoration: none;
+  font-size: 1.1rem;
+  line-height: 4rem;
+  background: white;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.work:hover img {
+  transform: scale(1.1);
+}
+
+.work:hover .layer {
+  height: 100%;
+}
+
+/* Contact Me Section */
+#contact {
+  padding: 7.5% 7.5% 0;
+}
+
+.contact-heading {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 3.5rem;
+}
+
+#contact p {
+  margin-top: 2rem;
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+}
+
+.contact {
+  color: crimson;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.socials {
+  margin-top: 2rem;
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+}
+
+.socials a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: white;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+
+.socials a:hover {
+  color: crimson;
+  transform: translateY(-0.5rem);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: black;
+  padding: 1rem;
+  margin: 1rem 0;
+  color: white;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
+
+.contact-btn {
+  margin-top: 2rem;
+  padding: 0.5rem 2rem;
+}
+
+.copyright {
+  padding-top: 5.7%;
+  text-align: center;
+}
+
+/* CSS for desktop only */
+
+@media (min-width: 991px) {
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    margin-left: 10%;
+    width: 0%;
+    left: 40%;
+    bottom: 0;
+    height: 0.15rem;
+    background: crimson;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease-in-out;
+  }
+
+  .nav-link:hover::after {
+    width: 80%;
+  }
+
+  .navbar {
+    transition: all 300ms ease-in-out;
+  }
+
+  .scroll-down .navbar {
+    transform: translate3d(0, -100%, 0);
+  }
+
+  .scroll-up .navbar {
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  .scroll-up .nav-link::after {
+    background: black;
+  }
+}
+
+/* CSS for Tablet */
+
+@media (max-width: 991px) and (min-width: 652px) {
+  .big-heading {
+    font-size: 7rem;
+    margin-bottom: 0;
+  }
+
+  .medium-heading {
+    font-size: 2.7rem;
+  }
+
+  #title {
+    text-align: center;
+    height: 100vh;
+  }
+
+  .aligner {
+    margin-left: 3.5%;
+  }
+
+  .names {
+    height: 3rem;
+    line-height: 3.3rem;
+    overflow: hidden;
+    text-align: left;
+  }
+
+  .medium-heading span {
+    position: relative;
+    color: crimson;
+    animation: swapper 10s ease infinite;
+  }
+
+  @keyframes swapper {
+    0%,
+    100% {
+      top: 0;
+    }
+    20% {
+      top: -0.4rem;
+    }
+    25% {
+      top: -4.25rem;
+    }
+    45% {
+      top: -4.25rem;
+    }
+    50% {
+      top: -8rem;
+    }
+    70% {
+      top: -8rem;
+    }
+    75% {
+      top: -11.8rem;
+    }
+    95% {
+      top: -11.8rem;
+    }
+  }
+
+  .about-heading {
+    margin-top: 7.5%;
+  }
+
+  .profile-pic {
+    width: 35%;
+  }
+
+  #work {
+    height: auto;
+    padding: 4.1% 7.5% 3rem;
+  }
+
+  .copyright {
+    padding-top: 6%;
+  }
+}
+
+/* CSS for Mobile */
+
+@media (max-width: 652px) {
+  .big-heading {
+    font-size: 4rem;
+    margin-bottom: 0;
+  }
+
+  .medium-heading {
+    font-size: 1.3rem;
+  }
+
+  #title {
+    text-align: center;
+    height: 100vh;
+  }
+
+  .aligner {
+    margin-left: 3.5%;
+  }
+
+  .names {
+    height: 3.5rem;
+    line-height: 3.5rem;
+    overflow: hidden;
+    text-align: left;
+  }
+
+  .medium-heading span {
+    position: relative;
+    color: crimson;
+    animation: swapper 10s ease infinite;
+  }
+
+  @keyframes swapper {
+    0%,
+    100% {
+      top: -0.1rem;
+    }
+    20% {
+      top: -0.1rem;
+    }
+    25% {
+      top: -3.6rem;
+    }
+    45% {
+      top: -3.6rem;
+    }
+    50% {
+      top: -7.1rem;
+    }
+    70% {
+      top: -7.1rem;
+    }
+    75% {
+      top: -10.6rem;
+    }
+    95% {
+      top: -10.6rem;
+    }
+  }
+
+  #about {
+    text-align: center;
+  }
+
+  .about-heading {
+    margin-top: 7.5%;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .profile-pic {
+    width: 45%;
+  }
+
+  .tab-content ul {
+    text-align: left;
+  }
+
+  #work {
+    height: auto;
+    padding: 4.1% 7.5% 2.5rem;
+  }
+
+  .work-heading {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .contact-heading {
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .socials {
+    margin-bottom: 0.5rem;
+  }
+
+  form input,
+  form textarea {
+    margin: 0.5rem 0;
+  }
+
+  .contact-btn {
+    margin-top: 1rem;
+  }
+
+  .copyright {
+    padding-top: 6.5%;
+  }
+}
